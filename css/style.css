@@ -1,0 +1,34 @@
+:root{
+    --bs-secondary-rgb: 17, 134, 117;
+}
+
+
+/* styling background pattern */
+.background-pattern {
+    min-height: 100vh;
+    background-color: rgb(208, 211, 203);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* styling green strip patter */
+.strip-pattern{
+    min-height: 15vh;
+}
+
+
+/* styling main container */
+.main-container {
+    height: 95vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh; 
+    position: relative;
+}
+
+/* personal avatar image */
+.personal-avatar img{
+    width: 3rem;
+
+}
