@@ -1,6 +1,7 @@
 :root{
     --bs-secondary-rgb: 17, 134, 117;
     --bs-light-rgb: 234, 234, 234;
+    --bs-info-rgb: 142, 218, 253;
 }
 
 
@@ -35,4 +36,15 @@
 /* custom color for toggle */
 .lightgrey-custom-colour{
     color: rgb(177, 177, 177);
+}
+
+/* custom color for finder section */
+.finder-section {
+    background-color: rgb(249, 249, 249);
+}
+
+/* custom search button */
+.btn-light {
+    --bs-btn-color: #7a8693;
+    --bs-btn-bg: white;
 }

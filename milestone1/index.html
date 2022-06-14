@@ -28,8 +28,8 @@
             <div class="row">
                 <div class="col-4">
                     <!-- user's img, name and toggle -->
-                    <nav class="navbar bg-light p-0">
-                        <div class="container-fluid">
+                    <nav class="navbar bg-light p-0 flex-shrink-0 d-flex">
+                        <div class="container-fluid ">
                             <!-- user avatar image and user's name-->
                             <a class="navbar-brand user-avatar-img" href="#">
                                 <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
@@ -43,8 +43,29 @@
                             </div>
                         </div>
                     </nav>
-                    <div class="col"></div>
+
+                    <!-- notification section -->
+                    <div class="bg-info flex-shrink-0 d-flex">
+                        <div class="icon">
+                            <i class="bg-white rounded-circle fa-solid fa-bell-slash fa-2xl"></i> 
+                        </div>
+                        <div class="notification-text-section">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- finder -->
+                    <div class="finder-section flex-shrink-0 d-flex justify-content-center">
+                        <div class="input-group p-2">
+                            <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0" type="button"></button>
+                            <input type="text" class="form-control border rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon">
+                        </div>
+                        
+                    </div>
                 </div>
+                <div class="col"></div>
             </div>
         </div>
 
