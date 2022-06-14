@@ -72,3 +72,20 @@
     --bs-btn-color: #7a8693;
     --bs-btn-bg: white;
 }
+
+/* --------------------- contact --------------------------------- */
+/* avatar custom width */
+.avatar-contatct-section img{
+    width: 3rem;
+}
+
+/* name style */
+.custom-name-contact-style{
+    font-weight: 400;
+}
+
+/* last message style */
+.custom-last-message-contact-style{
+    font-size: .7rem;
+    color: rgb(204 206 207);
+}
