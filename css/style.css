@@ -1,5 +1,6 @@
 :root{
     --bs-secondary-rgb: 17, 134, 117;
+    --bs-light-rgb: 234, 234, 234;
 }
 
 
@@ -18,7 +19,6 @@
     min-height: 15vh;
 }
 
-
 /* styling main container */
 .main-container {
     height: 95vh;
@@ -27,8 +27,12 @@
     position: relative;
 }
 
-/* personal avatar image */
-.personal-avatar img{
+/* styling user img */
+.user-avatar-img img{
     width: 3rem;
+}
 
+/* custom color for toggle */
+.lightgrey-custom-colour{
+    color: rgb(177, 177, 177);
 }

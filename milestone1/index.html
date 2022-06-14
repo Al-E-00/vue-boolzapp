@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.css' integrity='sha512-F5fn88UDJWd0T1GwpnIpbuFuSxCgXNnJhIihkiWeqYUyLt3oPUaYzL774VjL7eGj8ktZCZQS//txAxgokiz1Lw==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.css'
+        integrity='sha512-F5fn88UDJWd0T1GwpnIpbuFuSxCgXNnJhIihkiWeqYUyLt3oPUaYzL774VjL7eGj8ktZCZQS//txAxgokiz1Lw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css'
+        integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=='
+        crossorigin='anonymous' />
     <link rel="stylesheet" href="../css/style.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js' integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
+        integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+        crossorigin='anonymous'></script>
     <title>Boolzapp</title>
 </head>
+
 <body>
-    
+
     <div class="background-pattern">
         <div class="bg-secondary strip-pattern"></div>
     </div>
     <div id="app">
-        <div class="container bg-white main-container">
+        <div class="container bg-white main-container p-0">
             <div class="row">
                 <div class="col-4">
-                    <div class="row">
-                        <div class="col d-flex flex-shrink-0">
-                            <div class="personal-avatar d-flex">
-                                <img class="rounded-circle my-2" src="../img/avatar_io.jpg" alt="Name">
-                                <span class="align-self-center m-0 ps-2">Sofia</span>
+                    <!-- user's img, name and toggle -->
+                    <nav class="navbar bg-light p-0">
+                        <div class="container-fluid">
+                            <!-- user avatar image and user's name-->
+                            <a class="navbar-brand user-avatar-img" href="#">
+                                <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
+                                <span class="align-self-center mx-1 fs-6">Sofia</span>
+                            </a>
+                            <div class="navbar-nav d-flex flex-row gap-3 pe-2">
+                                <!-- toggle -->
+                                <a class="nav-link fa-solid fa-circle-notch lightgrey-custom-colour fa-lg"></a>
+                                <a class="nav-link fa-solid fa-message lightgrey-custom-colour fa-lg"></a>
+                                <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
                             </div>
                         </div>
-                    </div>
+                    </nav>
+                    <div class="col"></div>
                 </div>
-                <div class="col"></div>
             </div>
         </div>
-    </div>
 
-    <script src="js/app.js"></script>
+        <script src="js/app.js"></script>
 </body>
+
 </html>
