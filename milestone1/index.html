@@ -24,11 +24,11 @@
         <div class="bg-secondary strip-pattern"></div>
     </div>
     <div id="app">
-        <div class="container bg-white main-container p-0">
+        <div class="container bg-white main-container p-0 overflow-hidden">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4 pe-0">
                     <!-- user's img, name and toggle -->
-                    <nav class="navbar bg-light p-0 flex-shrink-0 d-flex">
+                    <nav class="navbar bg-light p-0 flex-shrink-0 d-flex border-end">
                         <div class="container-fluid custom-height">
                             <!-- user avatar image and user's name-->
                             <a class="navbar-brand user-avatar-img" href="#">
@@ -70,8 +70,8 @@
                     </div>
 
                     <!-- contact section -->
-                    <div class="custom-container d-flex flex-column flex-grow-1 flex-shrink-0 overflow-auto custom-container">
-                        <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2">
+                    <div class="d-flex flex-column flex-grow-1 overflow-auto custom-container">
+                        <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top">
                             <div class="d-flex contact">
                                 <div class="avatar-contatct-section">
                                     <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar 1">
@@ -84,6 +84,28 @@
                                 <p class="custom-time-contact-section flex-end">12:00</p>
                         </div>
                     </div>
+                </div>
+                <div class="col ps-0">
+                    <nav class="navbar bg-light p-0 flex-shrink-0 d-flex">
+                        <div class="container-fluid custom-height">
+                            <!-- contact avatar image and user's name-->
+                            <a class="navbar-brand user-avatar-img" href="#">
+                                <img class="rounded-circle" src="../img/avatar_1.jpg" alt="Personal avatar">
+                                <span class="align-self-center mx-1 fs-6">Michele</span>
+                                <span>Ultimo accesso oggi alle 12:00</span>
+                            
+                            </a>
+                            <div class="navbar-nav d-flex flex-row gap-3 pe-2">
+                                <!-- toggle -->
+                                <a class="nav-link fa-solid fa-magnifying-glass lightgrey-custom-colour fa-lg"></a>
+                                <a class="nav-link fa-solid fa-paperclip lightgrey-custom-colour fa-lg"></a>
+                                <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- text-section -->
+                    
                 </div>
             </div>
 
