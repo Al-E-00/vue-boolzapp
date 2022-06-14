@@ -29,7 +29,7 @@
                 <div class="col-4">
                     <!-- user's img, name and toggle -->
                     <nav class="navbar bg-light p-0 flex-shrink-0 d-flex">
-                        <div class="container-fluid ">
+                        <div class="container-fluid custom-height">
                             <!-- user avatar image and user's name-->
                             <a class="navbar-brand user-avatar-img" href="#">
                                 <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
@@ -45,14 +45,14 @@
                     </nav>
 
                     <!-- notification section -->
-                    <div class="bg-info flex-shrink-0 d-flex py-2">
+                    <div class="bg-info flex-shrink-0 d-flex custom-height">
                         <div class="icon d-flex align-items-center px-2">
                             <span class="fa-stack fa-lg">
                                 <i class="fa-solid fa-circle fa-stack-2x circle-bell-custom-color"></i>
                                 <i class="fa-solid fa-bell-slash fa-stack-1x bell-custom-color"></i>
                             </span>
                         </div>
-                        <div class="notification-text-section lh-1">
+                        <div class="notification-text-section lh-1 align-self-center">
                             <p class="m-0 custom-text-notification-style">Ricevi notifiche di nuovi messaggi</p>
                             <a class="custom-link-notification-text" href="#">Attiva notifiche desktop</a>
                         </div>
@@ -60,7 +60,7 @@
                     </div>
 
                     <!-- finder -->
-                    <div class="finder-section flex-shrink-0 d-flex justify-content-center">
+                    <div class="finder-section flex-shrink-0 d-flex justify-content-center custom-height-second" >
                         <div class="input-group p-2">
                             <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0"
                                 type="button"></button>
@@ -70,7 +70,7 @@
                     </div>
 
                     <!-- contact section -->
-                    <div class="overflow-auto">
+                    <div class="custom-container d-flex flex-column flex-grow-1 flex-shrink-0 overflow-auto custom-container">
                         <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2">
                             <div class="d-flex contact">
                                 <div class="avatar-contatct-section">

@@ -95,3 +95,22 @@
     font-size: .7rem;
     color: rgb(204 206 207);
 }
+
+.custom-height{
+    height: 10% ;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+
+}
+
+.custom-height-second {
+    height: 8% ;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+.custom-container{
+    height: calc(80% - 18%);
+    flex-shrink: 1;
+    flex-grow: 1;
+}
