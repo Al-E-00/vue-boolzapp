@@ -165,8 +165,8 @@ const contatti = [
 new Vue({
     el: "#app",
     data: {
-        contact: contatti,
-        
+        contactsList: contatti,
+
     }
 
 })
