@@ -4,7 +4,7 @@
     --bs-info-rgb: 142, 218, 253;
 }
 
-
+/* --------------------- background--------------------------------- */
 /* styling background pattern */
 .background-pattern {
     min-height: 100vh;
@@ -20,6 +20,7 @@
     min-height: 15vh;
 }
 
+/* --------------------- main container--------------------------------- */
 /* styling main container */
 .main-container {
     height: 95vh;
@@ -28,6 +29,7 @@
     position: relative;
 }
 
+/* --------------------- user bar--------------------------------- */
 /* styling user img */
 .user-avatar-img img{
     width: 3rem;
@@ -38,12 +40,34 @@
     color: rgb(177, 177, 177);
 }
 
+/* --------------------- notification section--------------------------------- */
+
+/* custom bell style */
+.circle-bell-custom-color {
+    color: white;
+}
+.bell-custom-color {
+    color: rgb(142, 218, 253);
+}
+
+/* link style */
+.custom-text-notification-style{
+    font-size: .9rem;
+}
+
+.custom-link-notification-text{
+    color:gray;
+    font-size: .8rem;
+}
+
+
+/* --------------------- finder --------------------------------- */
 /* custom color for finder section */
 .finder-section {
     background-color: rgb(249, 249, 249);
 }
 
-/* custom search button */
+/* custom search button (search section)*/
 .btn-light {
     --bs-btn-color: #7a8693;
     --bs-btn-bg: white;
