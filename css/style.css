@@ -158,3 +158,8 @@
     background-color: rgb(240, 234, 229);
 }
 
+
+/* clicked contact background */
+.clicked-element {
+    background-color: rgb(233, 235, 235);
+}
