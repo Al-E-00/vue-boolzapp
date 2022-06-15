@@ -168,7 +168,7 @@ new Vue({
         contactsList: contatti,
         messages: contatti[0].messages,
         active: true,
-        currentUser: "",
+        currentUser: contatti[0],
 
     },
     methods: {
