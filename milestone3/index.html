@@ -120,7 +120,7 @@
                         <!-- message bar -->
                         <div v-if="active" class="message-bar d-flex justify-content-center align-items-center py-2">
                             <i class="fa-solid fa-face-smile lightgrey-custom-colour fa-lg mx-4"></i>
-                            <input v-model="sendMessage" @keyup.enter="submit()" class="form-control border rounded"
+                            <input v-model="sendMessage" @keyup.enter="submit(), answer()" class="form-control border rounded"
                                 placeholder="Scrivi un nuovo messaggio">
                             <i class="fa-solid fa-microphone lightgrey-custom-colour mx-4"></i>
                         </div>

@@ -167,11 +167,9 @@ new Vue({
     data: {
         contactsList: contatti,
         messages: contatti[0].messages,
-        currentUser:"",
-        sendMessage:"",
+        currentUser: "",
+        sendMessage: "",
         active: false,
-
-
     },
     methods: {
         activeUser(activeContact) {
@@ -179,8 +177,8 @@ new Vue({
             this.active = true;
             this.selected = true;
         },
-        isSelected(contact){
-            if (contact.avatar === this.currentUser.avatar)  {
+        isSelected(contact) {
+            if (contact.avatar === this.currentUser.avatar) {
                 return true
             } else {
                 return false
@@ -188,16 +186,24 @@ new Vue({
         },
         submit() {
             this.currentUser.messages.push(
-                {   
+                {
                     date: "10/01/2020 15:50:00",
                     message: `${this.sendMessage}`,
-                    status: "sent",    
+                    status: "sent",
                 },
-                )
-                this.sendMessage= ""
+            )
+            this.sendMessage = ""
         },
-
-        
+        answer() {
+            setTimeout(() =>
+                this.currentUser.messages.push(
+                    {
+                        date: "10/01/2020 15:51:00",
+                        message: "ok",
+                        status: "received",
+                    }), 1000);
+            
+        }
     }
-
 })
+
