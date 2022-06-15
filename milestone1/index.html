@@ -24,100 +24,103 @@
         <div class="bg-secondary strip-pattern"></div>
     </div>
     <div id="app">
-        <div class="container bg-white main-container g-0">
-
-            <div class="row g-0 h-100">
-                <div class="col-4 h-100">
-                    <!-- user's img, name and toggle -->
-                    <nav class="navbar bg-light border-end py-1">
-                        <div class="container-fluid">
-                            <!-- user avatar image and user's name-->
-                            <a class="navbar-brand user-avatar-img" href="#">
-                                <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
-                                <span class="align-self-center mx-1 fs-6">Sofia</span>
-                            </a>
-                            <div class="navbar-nav d-flex flex-row gap-3 pe-2">
-                                <!-- toggle -->
-                                <a class="nav-link fa-solid fa-circle-notch lightgrey-custom-colour fa-lg"></a>
-                                <a class="nav-link fa-solid fa-message lightgrey-custom-colour fa-lg"></a>
-                                <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
-                            </div>
-                        </div>
-                    </nav>
-
-                    <!-- notification section -->
-                    <div class="bg-info d-flex py-2">
-                        <div class="icon d-flex align-items-center px-2">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa-solid fa-circle fa-stack-2x circle-bell-custom-color"></i>
-                                <i class="fa-solid fa-bell-slash fa-stack-1x bell-custom-color"></i>
-                            </span>
-                        </div>
-                        <div class="notification-text-section lh-1 align-self-center">
-                            <p class="m-0 custom-text-notification-style">Ricevi notifiche di nuovi messaggi</p>
-                            <a class="custom-link-notification-text" href="#">Attiva notifiche desktop</a>
-                        </div>
-
-                    </div>
-
-                    <!-- finder -->
-                    <div class="finder-section" >
-                        <div class="input-group p-2">
-                            <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0"
-                                type="button"></button>
-                            <input type="text" class="form-control border rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon">
-                        </div>
-                    </div>
-
-                    <!-- contact section -->
-                    <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                        <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top">
-                            <div class="d-flex contact">
-                                <div class="avatar-contatct-section">
-                                    <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar 1">
-                                </div>
-                                <div class="px-3 lh-1">
-                                    <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
-                                    <span class="custom-last-message-contact-style">Last message</span>
+        <div class="container">
+            <div class=" bg-white main-container shadow">
+                <div class="row g-0 h-100">
+                    <div class="col-4 h-100 d-flex flex-column">
+                        <!-- user's img, name and toggle -->
+                        <nav class="navbar bg-light border-end py-1">
+                            <div class="container-fluid">
+                                <!-- user avatar image and user's name-->
+                                <a class="navbar-brand user-avatar-img" href="#">
+                                    <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
+                                    <span class="align-self-center mx-1 fs-6">Sofia</span>
+                                </a>
+                                <div class="navbar-nav d-flex flex-row gap-3 pe-2">
+                                    <!-- toggle -->
+                                    <a class="nav-link fa-solid fa-circle-notch lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-message lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
                                 </div>
                             </div>
-                                <p class="custom-time-contact-section flex-end">12:00</p>
+                        </nav>
+    
+                        <!-- notification section -->
+                        <div class="bg-info d-flex py-2">
+                            <div class="icon d-flex align-items-center px-2">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa-solid fa-circle fa-stack-2x circle-bell-custom-color"></i>
+                                    <i class="fa-solid fa-bell-slash fa-stack-1x bell-custom-color"></i>
+                                </span>
+                            </div>
+                            <div class="notification-text-section lh-1 align-self-center">
+                                <p class="m-0 custom-text-notification-style">Ricevi notifiche di nuovi messaggi</p>
+                                <a class="custom-link-notification-text" href="#">Attiva notifiche desktop</a>
+                            </div>
+    
+                        </div>
+    
+                        <!-- finder -->
+                        <div class="finder-section" >
+                            <div class="input-group p-2">
+                                <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0"
+                                    type="button"></button>
+                                <input type="text" class="form-control border rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon">
+                            </div>
+                        </div>
+    
+                        <!-- contact section -->
+                        <div class="d-flex flex-column flex-grow-1 overflow-auto">
+                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top">
+                                <div class="d-flex contact">
+                                    <div class="avatar-contatct-section">
+                                        <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar 1">
+                                    </div>
+                                    <div class="px-3 lh-1">
+                                        <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
+                                        <span class="custom-last-message-contact-style">Last message</span>
+                                    </div>
+                                </div>
+                                    <p class="custom-time-contact-section flex-end">12:00</p>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col h-100 d-flex flex-column">
+                        <nav class="navbar bg-light p-0 d-flex">
+                            <div class="container-fluid custom-height">
+                                <!-- contact avatar image and user's name-->
+                                <a class="navbar-brand user-avatar-img" href="#">
+                                    <img class="rounded-circle" src="../img/avatar_1.jpg" alt="Personal avatar">
+                                    <span class="align-self-center mx-1 fs-6">Michele</span>
+                                
+                                </a>
+                                <div class="navbar-nav d-flex flex-row gap-3 pe-2">
+                                    <!-- toggle -->
+                                    <a class="nav-link fa-solid fa-magnifying-glass lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-paperclip lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
+                                </div>
+                            </div>
+                        </nav>
+    
+                        <!-- text-section -->
+                        <div class="main-section d-flex flex-grow-1">
+                            hj
+                        </div> 
+                        
+                        <!-- message bar -->
+                        <div class="message-bar d-flex justify-content-center align-items-center py-2">
+                            <i class="fa-solid fa-face-smile lightgrey-custom-colour fa-lg mx-4"></i>
+                            <input type="text" class="form-control border rounded" placeholder="Scrivi un nuovo messaggio" >
+                            <i class="fa-solid fa-microphone lightgrey-custom-colour mx-4"></i>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="col h-100">
-                    <nav class="navbar bg-light p-0 flex-shrink-0 d-flex">
-                        <div class="container-fluid custom-height">
-                            <!-- contact avatar image and user's name-->
-                            <a class="navbar-brand user-avatar-img" href="#">
-                                <img class="rounded-circle" src="../img/avatar_1.jpg" alt="Personal avatar">
-                                <span class="align-self-center mx-1 fs-6">Michele</span>
-                            
-                            </a>
-                            <div class="navbar-nav d-flex flex-row gap-3 pe-2">
-                                <!-- toggle -->
-                                <a class="nav-link fa-solid fa-magnifying-glass lightgrey-custom-colour fa-lg"></a>
-                                <a class="nav-link fa-solid fa-paperclip lightgrey-custom-colour fa-lg"></a>
-                                <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
-                            </div>
-                        </div>
-                    </nav>
-
-                    <!-- text-section -->
-                    <div class="main-section d-flex flex-grow-1">
-                        hj
-                    </div> 
-                    
-                    <!-- message bar -->
-                    <div class="message-bar d-flex justify-content-center align-items-center py-2">
-                        <i class="fa-solid fa-face-smile lightgrey-custom-colour fa-lg mx-4"></i>
-                        <input type="text" class="form-control border rounded" placeholder="Scrivi un nuovo messaggio" >
-                        <i class="fa-solid fa-microphone lightgrey-custom-colour mx-4"></i>
-                    </div>
-                </div>
+    
             </div>
+
 
             <script src="js/app.js"></script>
 </body>
