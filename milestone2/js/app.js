@@ -174,6 +174,7 @@ new Vue({
     methods: {
         activeUser(activeContact) {
             currentUser = activeContact;
+            console.log(currentUser);
         }
     }
 
