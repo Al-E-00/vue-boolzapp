@@ -167,13 +167,16 @@ new Vue({
     data: {
         contactsList: contatti,
         messages: contatti[0].messages,
-        active: true,
-        currentUser: contatti[0],
+        active: false,
+        selected: false,
+        currentUser: "",
 
     },
     methods: {
         activeUser(activeContact) {
             this.currentUser = activeContact;
+            this.active = true;
+            this.selected = true;
             console.log(currentUser);
         }
     }

@@ -73,7 +73,7 @@
 
                         <!-- contact section -->
                         <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top"  v-bind:class="{selectedItem: active}" @click="activeUser(contact)">
+                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top"  v-bind:class="{selected: true}" @click="activeUser(contact)">
                                 <div class="d-flex contact">
                                     <div class="avatar-contatct-section">
                                         <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar">
@@ -91,10 +91,10 @@
 
                     <div class="col h-100 d-flex flex-column">
                         <nav class="navbar bg-light p-0 d-flex">
-                            <div class="container-fluid custom_navbar_settings justify-content-start position-relative">
+                            <div v-if="active" class="container-fluid custom_navbar_settings justify-content-start position-relative">
                                 <!-- contact avatar image and user's name-->
                                 <a class="navbar-brand user-avatar-img py-2" href="#">
-                                    <img class="rounded-circle" :src="`../img/avatar${contactsList[0].avatar}.jpg`" alt="User avatar">
+                                    <img class="rounded-circle" :src="`../img/avatar${currentUser.avatar}.jpg`" :alt="currentUser.name">
                                 </a>
                                 <div class="text_current_contact_view d-flex flex-column">
                                     <span class="name_current_contact">{{currentUser.name}}</span>
