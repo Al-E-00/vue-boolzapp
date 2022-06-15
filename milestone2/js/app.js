@@ -172,7 +172,7 @@ new Vue({
     },
     methods: {
         activeUser(activeContact) {
-            
+            console.log(activeContact)
         }
     }
 
