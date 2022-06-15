@@ -178,7 +178,7 @@ new Vue({
             console.log(currentUser);
         },
         isSelected(){
-            if (contact === currentUser)  {
+            if (contact === this.currentUser)  {
                 console.log("true")
             }
         }
