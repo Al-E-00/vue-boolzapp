@@ -178,7 +178,7 @@ new Vue({
             console.log(currentUser);
         },
         isSelected(){
-            if (contact === this.currentUser)  {
+            if (contact === this.currentUser.avatar)  {
                 console.log("true")
             }
         }
