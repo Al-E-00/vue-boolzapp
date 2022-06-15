@@ -24,12 +24,13 @@
         <div class="bg-secondary strip-pattern"></div>
     </div>
     <div id="app">
-        <div class="container bg-white main-container p-0 overflow-hidden">
-            <div class="row">
-                <div class="col-4 pe-0">
+        <div class="container bg-white main-container g-0">
+
+            <div class="row g-0 h-100">
+                <div class="col-4 h-100">
                     <!-- user's img, name and toggle -->
-                    <nav class="navbar bg-light p-0 flex-shrink-0 d-flex border-end">
-                        <div class="container-fluid custom-height">
+                    <nav class="navbar bg-light border-end py-1">
+                        <div class="container-fluid">
                             <!-- user avatar image and user's name-->
                             <a class="navbar-brand user-avatar-img" href="#">
                                 <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
@@ -45,7 +46,7 @@
                     </nav>
 
                     <!-- notification section -->
-                    <div class="bg-info flex-shrink-0 d-flex custom-height">
+                    <div class="bg-info d-flex py-2">
                         <div class="icon d-flex align-items-center px-2">
                             <span class="fa-stack fa-lg">
                                 <i class="fa-solid fa-circle fa-stack-2x circle-bell-custom-color"></i>
@@ -60,7 +61,7 @@
                     </div>
 
                     <!-- finder -->
-                    <div class="finder-section flex-shrink-0 d-flex justify-content-center custom-height-second" >
+                    <div class="finder-section" >
                         <div class="input-group p-2">
                             <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0"
                                 type="button"></button>
@@ -69,7 +70,7 @@
                     </div>
 
                     <!-- contact section -->
-                    <div class="d-flex flex-column flex-grow-1 overflow-auto custom-container">
+                    <div class="d-flex flex-column flex-grow-1 overflow-auto">
                         <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top">
                             <div class="d-flex contact">
                                 <div class="avatar-contatct-section">
@@ -84,7 +85,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col ps-0">
+
+
+                <div class="col h-100">
                     <nav class="navbar bg-light p-0 flex-shrink-0 d-flex">
                         <div class="container-fluid custom-height">
                             <!-- contact avatar image and user's name-->
@@ -103,8 +106,8 @@
                     </nav>
 
                     <!-- text-section -->
-                    <div class="main-section flex-grow-1">
-                        
+                    <div class="main-section d-flex flex-grow-1">
+                        hj
                     </div> 
                     
                     <!-- message bar -->
