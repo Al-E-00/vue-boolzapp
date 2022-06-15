@@ -157,8 +157,3 @@
 .message-bar {
     background-color: rgb(240, 234, 229);
 }
-
-
-.selectedItem{
-    opacity: .5;
-}

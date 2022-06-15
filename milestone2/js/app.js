@@ -168,11 +168,14 @@ new Vue({
         contactsList: contatti,
         messages: contatti[0].messages,
         active: true,
+        currentUser: "",
 
     },
     methods: {
         activeUser(activeContact) {
             console.log(activeContact)
+            currentUser = activeContact;
+            console.log(currentUser)
         }
     }
 
