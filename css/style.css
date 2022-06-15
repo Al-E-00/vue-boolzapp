@@ -96,6 +96,7 @@
     color: rgb(204 206 207);
 }
 
+/* CUSTOM HEIGHT FOR THE SLIDEBAR SECTIONS */
 .custom-height{
     height: 65px;
 }
@@ -106,4 +107,19 @@
 
 .custom-container{
     max-height: 60vh;
+}
+
+
+
+
+/* --------------------- MAIN SECTION (RIGHT COL) --------------------------------- */
+
+.main-section {
+    background-image: url(../img/mine.jpg);
+    min-height: 85%;
+}
+
+/* -------------------- message bar-------------------------------- */
+.message-bar {
+    background-color: rgb(240, 234, 229);
 }
