@@ -78,7 +78,7 @@
                                 <div class="d-flex contact">
                                     <div class="avatar-contatct-section">
                                         <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'"
-                                            alt="Avatar 1">
+                                            alt="Avatar">
                                     </div>
                                     <div class="px-3 lh-1">
                                         <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
@@ -96,7 +96,7 @@
                             <div class="container-fluid custom_navbar_settings justify-content-start position-relative">
                                 <!-- contact avatar image and user's name-->
                                 <a class="navbar-brand user-avatar-img py-2" href="#">
-                                    <img class="rounded-circle" src="../img/avatar_1.jpg" alt="Personal avatar">
+                                    <img class="rounded-circle" :src="`../img/avatar${contactsList[0].avatar}.jpg`" alt="User avatar">
                                 </a>
                                 <div class="text_current_contact_view d-flex flex-column">
                                     <span class="name_current_contact">Michele</span>
@@ -113,17 +113,9 @@
 
                         <!-- text-section -->
                         <div class="main-section d-flex flex-column flex-grow-1 p-3 overflow-auto">
-                            <div class="message sent">
-                                <div class="text"> Hai portato a spasso il cane</div>
-                                <div class="data">15:30</div>
-                            </div>
-                            <div class="message sent ">
-                                <div class="text">Ricordati di stendere i panni</div>
-                                <div class="data">15:30</div>
-                            </div>
-                            <div class="message received">
-                                <div class="text">Tutto fatto!</div>
-                                <div class="data">16:15</div>
+                            <div v-for="userMessage in messages" :class="`message ${userMessage.status}`">
+                                <div class="text">{{userMessage.message}}</div>
+                                <div class="data">{{userMessage.date}}</div>
                             </div>
                         </div>
 

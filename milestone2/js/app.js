@@ -166,6 +166,10 @@ new Vue({
     el: "#app",
     data: {
         contactsList: contatti,
+        messages: contatti[0].messages,
+
+    },
+    methods: {
 
     }
 
