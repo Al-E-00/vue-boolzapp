@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.css'
+        integrity='sha512-F5fn88UDJWd0T1GwpnIpbuFuSxCgXNnJhIihkiWeqYUyLt3oPUaYzL774VjL7eGj8ktZCZQS//txAxgokiz1Lw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css'
+        integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
+        integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+        crossorigin='anonymous'></script>
+    <title>Boolzapp</title>
+</head>
+
+<body>
+
+    <div class="background-pattern">
+        <div class="bg-secondary strip-pattern"></div>
+    </div>
+    <div id="app">
+        <div class="container">
+            <div class=" bg-white main-container shadow">
+                <div class="row g-0 h-100">
+                    <div class="col-4 h-100 d-flex flex-column">
+                        <!-- user's img, name and toggle -->
+                        <nav class="navbar bg-light border-end py-2">
+                            <div class="container-fluid">
+                                <!-- user avatar image and user's name-->
+                                <a class="navbar-brand user-avatar-img p-0" href="#">
+                                    <img class="rounded-circle" src="../img/avatar_io.jpg" alt="Personal avatar">
+                                    <span class="align-self-center mx-1 fs-6">Sofia</span>
+                                </a>
+                                <div class="navbar-nav d-flex flex-row gap-3 pe-2">
+                                    <!-- toggle -->
+                                    <a class="nav-link fa-solid fa-circle-notch lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-message lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <!-- notification section -->
+                        <div class="bg-info d-flex py-2">
+                            <div class="icon d-flex align-items-center px-2">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa-solid fa-circle fa-stack-2x circle-bell-custom-color"></i>
+                                    <i class="fa-solid fa-bell-slash fa-stack-1x bell-custom-color"></i>
+                                </span>
+                            </div>
+                            <div class="notification-text-section align-self-center">
+                                <p class="m-0 custom-text-notification-style">Ricevi notifiche di nuovi messaggi</p>
+                                <a class="custom-link-notification-text" href="#">Attiva notifiche desktop</a>
+                            </div>
+
+                        </div>
+
+                        <!-- finder -->
+                        <div class="finder-section">
+                            <div class="input-group p-2">
+                                <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0"
+                                    type="button"></button>
+                                <input type="text" class="form-control border rounded-0"
+                                    placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="Example text with button addon">
+                            </div>
+                        </div>
+
+                        <!-- contact section -->
+                        <div class="d-flex flex-column flex-grow-1 overflow-auto">
+                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top" :class="{'clicked-element': isSelected(contact)}"   @click="activeUser(contact)">
+                                <div class="d-flex contact">
+                                    <div class="avatar-contatct-section">
+                                        <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar">
+                                    </div>
+                                    <div class="px-3 lh-1">
+                                        <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
+                                        <span class="custom-last-message-contact-style">Last message</span>
+                                    </div>
+                                </div>
+                                <p class="custom-time-contact-section flex-end">12:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div  class="col h-100 d-flex flex-column">
+                        <nav v-if="active" class="navbar bg-light p-0 d-flex">
+                            <div class="container-fluid custom_navbar_settings justify-content-start position-relative">
+                                <!-- contact avatar image and user's name-->
+                                <a class="navbar-brand user-avatar-img py-2" href="#">
+                                    <img class="rounded-circle" :src="`../img/avatar${currentUser.avatar}.jpg`" :alt="currentUser.name">
+                                </a>
+                                <div class="text_current_contact_view d-flex flex-column">
+                                    <span class="name_current_contact">{{currentUser.name}}</span>
+                                    <span class="last_access_current_contact">Ultimo accesso oggi alle 12:00</span>
+                                </div>
+                                <div class="navbar-nav d-flex flex-row gap-3 custom_position_current_contact_tools">
+                                    <!-- toggle -->
+                                    <a class="nav-link fa-solid fa-magnifying-glass lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-paperclip lightgrey-custom-colour fa-lg"></a>
+                                    <a class="nav-link fa-solid fa-ellipsis-vertical lightgrey-custom-colour fa-lg"></a>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <!-- text-section -->
+                        <div class="main-section d-flex flex-column flex-grow-1 p-3 overflow-auto">
+                            <div v-for="userMessage in currentUser.messages" :class="`message ${userMessage.status}`">
+                                <div class="text">{{userMessage.message}}</div>
+                                <div class="data">{{userMessage.date}}</div>
+                            </div>
+                        </div>
+
+                        <!-- message bar -->
+                        <div v-if="active" class="message-bar d-flex justify-content-center align-items-center py-2">
+                            <i class="fa-solid fa-face-smile lightgrey-custom-colour fa-lg mx-4"></i>
+                            <input v-model="sendMessage" @keyup.enter="submit()" class="form-control border rounded"
+                                placeholder="Scrivi un nuovo messaggio">
+                            <i class="fa-solid fa-microphone lightgrey-custom-colour mx-4"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
