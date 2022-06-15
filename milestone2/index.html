@@ -73,7 +73,7 @@
 
                         <!-- contact section -->
                         <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top clicked-element"  v-bind:class="{selected: true}" @click="activeUser(contact)">
+                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top clicked-element"  @click="activeUser(contact)">
                                 <div class="d-flex contact">
                                     <div class="avatar-contatct-section">
                                         <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar">

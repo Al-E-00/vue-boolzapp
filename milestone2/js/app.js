@@ -167,8 +167,6 @@ new Vue({
     data: {
         contactsList: contatti,
         messages: contatti[0].messages,
-        active: false,
-        selected: false,
         currentUser: "",
 
     },
@@ -178,7 +176,14 @@ new Vue({
             this.active = true;
             this.selected = true;
             console.log(currentUser);
+        },
+        isSelected(){
+            if (contact === currentUser)  {
+                console.log("true")
+            }
         }
+
+        
     }
 
 })
