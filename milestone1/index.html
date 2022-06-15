@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </nav>
-    
+
                         <!-- notification section -->
                         <div class="bg-info d-flex py-2">
                             <div class="icon d-flex align-items-center px-2">
@@ -57,36 +57,40 @@
                                 <p class="m-0 custom-text-notification-style">Ricevi notifiche di nuovi messaggi</p>
                                 <a class="custom-link-notification-text" href="#">Attiva notifiche desktop</a>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- finder -->
-                        <div class="finder-section" >
+                        <div class="finder-section">
                             <div class="input-group p-2">
                                 <button class="btn btn-light fa-solid fa-magnifying-glass border rounded-0"
                                     type="button"></button>
-                                <input type="text" class="form-control border rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon">
+                                <input type="text" class="form-control border rounded-0"
+                                    placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="Example text with button addon">
                             </div>
                         </div>
-    
+
                         <!-- contact section -->
                         <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                            <div v-for="(contact, i) in contactsList" class="d-flex justify-content-between p-2 border-top">
+                            <div v-for="(contact, i) in contactsList"
+                                class="d-flex justify-content-between p-2 border-top">
                                 <div class="d-flex contact">
                                     <div class="avatar-contatct-section">
-                                        <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'" alt="Avatar 1">
+                                        <img class="rounded-circle" :src="'../img/avatar' + contact.avatar + '.jpg'"
+                                            alt="Avatar 1">
                                     </div>
                                     <div class="px-3 lh-1">
                                         <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
                                         <span class="custom-last-message-contact-style">Last message</span>
                                     </div>
                                 </div>
-                                    <p class="custom-time-contact-section flex-end">12:00</p>
+                                <p class="custom-time-contact-section flex-end">12:00</p>
                             </div>
                         </div>
                     </div>
-    
-    
+
+
                     <div class="col h-100 d-flex flex-column">
                         <nav class="navbar bg-light p-0 d-flex">
                             <div class="container-fluid custom-height">
@@ -94,7 +98,7 @@
                                 <a class="navbar-brand user-avatar-img" href="#">
                                     <img class="rounded-circle" src="../img/avatar_1.jpg" alt="Personal avatar">
                                     <span class="align-self-center mx-1 fs-6">Michele</span>
-                                
+
                                 </a>
                                 <div class="navbar-nav d-flex flex-row gap-3 pe-2">
                                     <!-- toggle -->
@@ -104,25 +108,28 @@
                                 </div>
                             </div>
                         </nav>
-    
+
                         <!-- text-section -->
                         <div class="main-section d-flex flex-grow-1">
                             hj
-                        </div> 
-                        
+                        </div>
+
                         <!-- message bar -->
                         <div class="message-bar d-flex justify-content-center align-items-center py-2">
                             <i class="fa-solid fa-face-smile lightgrey-custom-colour fa-lg mx-4"></i>
-                            <input type="text" class="form-control border rounded" placeholder="Scrivi un nuovo messaggio" >
+                            <input type="text" class="form-control border rounded"
+                                placeholder="Scrivi un nuovo messaggio">
                             <i class="fa-solid fa-microphone lightgrey-custom-colour mx-4"></i>
                         </div>
                     </div>
                 </div>
-    
+
             </div>
+        </div>
+    </div>
 
 
-            <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
