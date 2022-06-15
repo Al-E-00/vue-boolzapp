@@ -168,6 +168,7 @@ new Vue({
         contactsList: contatti,
         messages: contatti[0].messages,
         currentUser: "",
+        
 
     },
     methods: {
@@ -179,7 +180,9 @@ new Vue({
         },
         isSelected(contact){
             if (contact.avatar === this.currentUser.avatar)  {
-                console.log("true")
+                return true
+            } else {
+                return false
             }
         }
 
