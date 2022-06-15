@@ -97,7 +97,7 @@
                                     <img class="rounded-circle" :src="`../img/avatar${contactsList[0].avatar}.jpg`" alt="User avatar">
                                 </a>
                                 <div class="text_current_contact_view d-flex flex-column">
-                                    <span class="name_current_contact">Michele</span>
+                                    <span class="name_current_contact">Milchele</span>
                                     <span class="last_access_current_contact">Ultimo accesso oggi alle 12:00</span>
                                 </div>
                                 <div class="navbar-nav d-flex flex-row gap-3 custom_position_current_contact_tools">
@@ -111,7 +111,7 @@
 
                         <!-- text-section -->
                         <div class="main-section d-flex flex-column flex-grow-1 p-3 overflow-auto">
-                            <div v-for="userMessage in messages" :class="`message ${userMessage.status}`">
+                            <div v-for="userMessage in currentUser.messages" :class="`message ${userMessage.status}`">
                                 <div class="text">{{userMessage.message}}</div>
                                 <div class="data">{{userMessage.date}}</div>
                             </div>
