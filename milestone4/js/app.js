@@ -1,3 +1,6 @@
+dayjs.extend(dayjs_plugin_customParseFormat);
+dayjs.extend(dayjs_plugin_relativeTime);
+
 const contatti = [
     {
         name: "Michele",
@@ -208,6 +211,9 @@ new Vue({
             return this.contactsList.filter(letter => {
                 return letter.name.toLowerCase().includes(this.searchContact.toLowerCase())
             })
+        },
+        formatDate(date) {
+            return dayjs(date, "DD/MM/YYYY HH:mm:ss").format("HH:mm:ss");
         }
     }
 })
