@@ -12,8 +12,8 @@
         integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=='
         crossorigin='anonymous' />
     <link rel="stylesheet" href="../css/style.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
-        integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.min.js'
+        integrity='sha512-deBbW1lpMT6h3gvOzmeMPft4pf9CMGjCKc5jSNq2pMSjtkMPuELbd4N3LKXVq/t1t6qco4q3u/XguyqGqlOMjA=='
         crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.8/dayjs.min.js'
         integrity='sha512-kZ+x2gdehn6OZMWZSp3Vt5R+v9hQTYEATQwaUfWquhxbvNVAy6IRtYs7asdyxKUTqG0I5ZqBqnzcBrpnHJCAGw=='
@@ -83,7 +83,8 @@
 
                         <!-- contacts section -->
                         <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                            <div v-for="(contact, i) in findContact()" class="d-flex justify-content-between p-2 border-top"
+                            <div v-for="(contact, i) in findContact()"
+                                class="d-flex justify-content-between p-2 border-top"
                                 :class="{'clicked-element': isSelected(contact)}" @click="activeUser(contact)">
                                 <div class="d-flex contact">
                                     <div class="avatar-contatct-section">
@@ -92,10 +93,11 @@
                                     </div>
                                     <div class="px-3 lh-1">
                                         <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
-                                        <span  class="custom-last-message-contact-style">{{lastMessage(i)}}</span>
+                                        <span class="custom-last-message-contact-style">{{lastMessage(i)}}</span>
                                     </div>
                                 </div>
-                                <p class="custom-time-contact-section flex-end">{{formatDateToMinute(lastMessageTime(i))}}</p>
+                                <p class="custom-time-contact-section flex-end">
+                                    {{formatDateToMinute(lastMessageTime(i))}}</p>
                             </div>
                         </div>
                     </div>
@@ -124,7 +126,8 @@
 
                         <!-- text-section -->
                         <div class="main-section d-flex flex-column flex-grow-1 p-3 overflow-auto">
-                            <div v-for="(userMessage, i) in currentUser.messages" :class="`message ${userMessage.status}`">
+                            <div v-for="(userMessage, i) in currentUser.messages"
+                                :class="`message ${userMessage.status}`">
                                 <div class="text">{{userMessage.message}}</div>
                                 <div class="data">{{formatDate(userMessage.date)}}</div>
 
@@ -136,7 +139,8 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                         <li><button class="dropdown-item" type="button">Message info</button></li>
-                                        <li><button @click="deleteMessage(i)" class="dropdown-item" type="button">Delete message</button></li>
+                                        <li><button @click="deleteMessage(i)" class="dropdown-item" type="button">Delete
+                                                message</button></li>
                                         </li>
                                     </ul>
                                 </div>
