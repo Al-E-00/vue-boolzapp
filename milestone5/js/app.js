@@ -221,7 +221,11 @@ new Vue({
         lastMessage: function (index) {
             let messageArray = this.contactsList[index].messages;
             let messageArraylength = messageArray.length;
-            return messageArray[messageArraylength - 1].message;
+            if (messageArray[messageArraylength - 1].status === "received") {
+                return messageArray[messageArraylength - 1].message;
+            } else {
+                return messageArray[messageArraylength - 2].message;
+            }
         }
     }
 })
