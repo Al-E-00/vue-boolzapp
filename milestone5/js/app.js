@@ -220,13 +220,16 @@ new Vue({
         },
         lastMessage: function (index) {
             let messageArray = this.contactsList[index].messages;
-            let messageArraylength = messageArray.length;
-            if (messageArray[messageArraylength - 1].status === "received") {
-                return messageArray[messageArraylength - 1].message;
-            } else {
-                return messageArray[messageArraylength - 2].message;
-            }
+            let messageArraylength = messageArray.length - 1;
+            let sentMessages = [];
+            
+            for (let i = 0; i <= messageArraylength; i++) {
+                if (messageArray[i].status === "received") {
+                    sentMessages.push(messageArray[i].message)
+                }
+            };
+
+            return sentMessages[sentMessages.length - 1];
         }
     }
 })
-
