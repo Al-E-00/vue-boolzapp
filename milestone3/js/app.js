@@ -170,6 +170,7 @@ new Vue({
         currentUser: "",
         sendMessage: "",
         active: false,
+        searchContact: ""
     },
     methods: {
         activeUser(activeContact) {
@@ -198,11 +199,15 @@ new Vue({
             setTimeout(() =>
                 this.currentUser.messages.push(
                     {
-                        date: "10/01/2020 15:51:00",
+                        date: "10/01/2020 15:50:01",
                         message: "ok",
                         status: "received",
                     }), 1000);
-            
+        },
+        findContact() {
+            return this.contactsList.filter(letter => {
+                return console.log(letter.name === this.searchContact)
+            })
         }
     }
 })
