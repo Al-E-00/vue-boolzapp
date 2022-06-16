@@ -206,7 +206,7 @@ new Vue({
         },
         findContact() {
             return this.contactsList.filter(letter => {
-                return console.log(letter.name == this.searchContact)
+                return letter.name.toLowerCase().includes(this.searchContact.toLowerCase())
             })
         }
     }
