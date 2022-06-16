@@ -160,9 +160,41 @@
 
 .custom-dropdown-alignment {
     position: absolute;
-    right: .5rem;
+    right: .6rem;
     top: .1rem;
 }
+
+/* -------------------Dropdown menu animation ------------------------ */
+.custom_dropdown {
+    color: rgb(169, 167, 167);
+    transform: rotate(0deg);
+}
+
+.custom_dropdown:hover {
+    color: rgb(129, 129, 129);
+}
+
+.custom_dropdown:focus {
+    animation-name: dropdownAnimate;
+    animation-duration: .5s;
+    transform: rotate(180deg);
+    
+}
+
+@keyframes dropdownAnimate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80%{
+        transform: rotate(210deg);
+    }
+
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
 
 
 /* clicked contact background */
