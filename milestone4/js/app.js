@@ -204,6 +204,11 @@ new Vue({
                         status: "received",
                     }), 1000);
         },
+        findContact() {
+            return this.contactsList.filter(letter => {
+                return console.log(letter.name == this.searchContact)
+            })
+        }
     }
 })
 
