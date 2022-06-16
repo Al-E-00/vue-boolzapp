@@ -217,6 +217,11 @@ new Vue({
         },
         deleteMessage(index) {
             this.currentUser.messages.splice(index, 1)
+        },
+        lastMessage: function (index) {
+            let messageArray = this.contactsList[index].messages;
+            let messageArraylength = messageArray.length;
+            return messageArray[messageArraylength - 1].message;
         }
     }
 })

@@ -81,9 +81,9 @@
                             </div>
                         </div>
 
-                        <!-- contact section -->
+                        <!-- contacts section -->
                         <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                            <div v-for="contact in findContact()" class="d-flex justify-content-between p-2 border-top"
+                            <div v-for="(contact, i) in findContact()" class="d-flex justify-content-between p-2 border-top"
                                 :class="{'clicked-element': isSelected(contact)}" @click="activeUser(contact)">
                                 <div class="d-flex contact">
                                     <div class="avatar-contatct-section">
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="px-3 lh-1">
                                         <h6 class="m-0 custom-name-contact-style">{{contact.name}}</h6>
-                                        <span class="custom-last-message-contact-style">Last message</span>
+                                        <span  class="custom-last-message-contact-style">{{lastMessage(i)}}</span>
                                     </div>
                                 </div>
                                 <p class="custom-time-contact-section flex-end">12:00</p>
