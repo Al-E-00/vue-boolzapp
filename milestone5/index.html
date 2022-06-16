@@ -95,7 +95,7 @@
                                         <span  class="custom-last-message-contact-style">{{lastMessage(i)}}</span>
                                     </div>
                                 </div>
-                                <p class="custom-time-contact-section flex-end">12:00</p>
+                                <p class="custom-time-contact-section flex-end">{{formatDateToMinute(lastMessageTime(i))}}</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                                 </a>
                                 <div class="text_current_contact_view d-flex flex-column">
                                     <span class="name_current_contact">{{currentUser.name}}</span>
-                                    <span class="last_access_current_contact">Ultimo accesso oggi alle 12:00</span>
+                                    <span class="last_access_current_contact">Ultimo accesso {{currentDate()}}</span>
                                 </div>
                                 <div class="navbar-nav d-flex flex-row gap-3 custom_position_current_contact_tools">
                                     <!-- toggle -->

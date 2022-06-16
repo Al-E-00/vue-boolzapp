@@ -191,7 +191,7 @@ new Vue({
         submit() {
             this.currentUser.messages.push(
                 {
-                    date: "10/01/2020 15:50:00",
+                    date: dayjs(),
                     message: `${this.sendMessage}`,
                     status: "sent",
                 },
@@ -202,7 +202,7 @@ new Vue({
             setTimeout(() =>
                 this.currentUser.messages.push(
                     {
-                        date: "10/01/2020 15:50:01",
+                        date: dayjs(),
                         message: "ok",
                         status: "received",
                     }), 1000);
@@ -215,21 +215,40 @@ new Vue({
         formatDate(date) {
             return dayjs(date, "DD/MM/YYYY HH:mm:ss").format("HH:mm:ss");
         },
+        formatDateToMinute(date){
+            return dayjs(date, "DD/MM/YYYY HH:mm:ss").format("HH:mm")
+        },
+        currentDate() {
+            return dayjs().format("DD/MM/YYYY HH:mm")
+        },
         deleteMessage(index) {
             this.currentUser.messages.splice(index, 1)
         },
         lastMessage: function (index) {
             let messageArray = this.contactsList[index].messages;
             let messageArraylength = messageArray.length - 1;
-            let sentMessages = [];
-            
+            let receivedMessages = [];
+
             for (let i = 0; i <= messageArraylength; i++) {
                 if (messageArray[i].status === "received") {
-                    sentMessages.push(messageArray[i].message)
+                    receivedMessages.push(messageArray[i].message)
                 }
             };
 
-            return sentMessages[sentMessages.length - 1];
+            return receivedMessages[receivedMessages.length - 1];
+        },
+        lastMessageTime: function (index) {
+            let messageArray = this.contactsList[index].messages;
+            let messageArraylength = messageArray.length - 1;
+            let lastMessageTime = [];
+
+            for (let i = 0; i <= messageArraylength; i++) {
+                if (messageArray[i].status === "received") {
+                    lastMessageTime.push(messageArray[i].date)
+                }
+            };
+
+            return lastMessageTime[lastMessageTime.length - 1];
         }
     }
 })
