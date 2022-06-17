@@ -166,7 +166,7 @@
 
 /* -------------------Dropdown menu animation ------------------------ */
 .custom_dropdown {
-    color: rgb(169, 167, 167);
+    color: rgba(169, 167, 167, 0.466);
     transform: rotate(0deg);
 }
 
